@@ -91,10 +91,22 @@ footer {
 
 .social-media-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 
   width: 100%;
+
+  @media screen and (min-width: $md-bp) {
+    justify-content: flex-start;
+  }
+}
+
+.social-media-item:first-of-type {
+  @media screen and (min-width: $md-bp) {
+    margin-left: -0.75rem;
+  }
 }
 
 .social-media-item a {

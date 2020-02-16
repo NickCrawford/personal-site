@@ -200,7 +200,7 @@ header {
 
   * {
     background-color: $darker;
-    color: $light;
+    color: white;
     padding: 0.5rem;
     z-index: 10;
     transform: translate(0, 0);

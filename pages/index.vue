@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <aside>
-      <div>
+      <header>
         <h1 class="title is-1">Nick Crawford</h1>
 
         <h2 class="subtitle is-4">
@@ -9,13 +9,16 @@
         </h2>
 
         <span class="line-break"></span>
-      </div>
+      </header>
 
       <contact-container class="stretch"></contact-container>
     </aside>
 
     <div id="projects-container">
-      <h3 class="subtitle is-3" style="grid-column: span 3;">
+      <h3
+        class="subtitle is-4"
+        style="grid-column: span 3; margin: 2rem 0 -2rem;"
+      >
         Selected Works...
       </h3>
 
@@ -70,40 +73,80 @@ export default {
 #home {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: 'aside aside projects projects projects projects';
-  column-gap: 8rem;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-areas:
+    'aside aside'
+    'projects projects';
+
+  column-gap: 6rem;
 
   align-items: flex-start;
 
   padding: 4rem 1rem 2rem;
+
+  @media screen and (min-width: $lg-bp) {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 'aside aside projects projects projects projects';
+  }
 }
 
 aside {
   grid-area: aside;
-  position: sticky;
-  top: 4rem;
+  position: relative;
 
   height: 100%;
-  max-height: calc(100vh - 6rem);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  header {
+    font-size: 0.5em;
+  }
+
+  @media screen and (orientation: landscape) and (min-width: $lg-bp) {
+    max-height: calc(100vh - 6rem);
+  }
+
+  @media screen and (min-width: $md-bp) {
+    header {
+      font-size: 0.6em;
+    }
+  }
+
+  @media screen and (min-width: $lg-bp) {
+    position: sticky;
+    top: 4rem;
+  }
+
+  @media screen and (min-width: $xl-bp) {
+    header {
+      font-size: 1em;
+    }
+  }
 }
 
 #projects-container {
   grid-area: projects;
 
   display: grid;
-  grid-auto-rows: minmax(max-content, 20vh);
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-flow: dense;
-
-  grid-gap: 2rem;
+  grid-auto-rows: minmax(max-content, 15vh);
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-gap: 4.5rem 0;
+  grid-auto-flow: row;
 
   min-height: calc(100vh - 6rem);
+
+  @media screen and (min-width: $lg-bp) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(max-content, 20vh);
+    grid-auto-flow: dense;
+
+    grid-gap: 4.5rem 2rem;
+  }
 }
 
 .line-break {

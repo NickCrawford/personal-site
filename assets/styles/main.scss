@@ -32,7 +32,7 @@ a {
 @media (prefers-color-scheme: dark) {
   body {
     background: $darker;
-    color: #FFF;
+    color: $light;
   }
 
   a {
