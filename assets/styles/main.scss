@@ -1,0 +1,45 @@
+@import './variables';
+
+@import './typography';
+@import './transitions';
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #FAFAFA;
+  color: $darker;
+  // background: $success;
+  // color: white;
+}
+
+.title {
+  // color: $dark;
+  color: $darker;
+}
+
+.subtitle {
+  color: $accent;
+  // color: $light;
+}
+
+a {
+  color: $light;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $darker;
+    color: #FFF;
+  }
+
+  a {
+    color: $light;
+  }
+
+  .title {
+    color: $accent;
+  }
+}
