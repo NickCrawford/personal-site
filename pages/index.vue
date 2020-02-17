@@ -5,8 +5,17 @@
         <aside>
           <header>
             <transition name="fade-down" appear>
-              <h1 class="title is-1">Nick Crawford</h1>
+              <svg
+                viewBox="0 0 560 262"
+                style="width: 100%;"
+                class="title is-1"
+                preserveAspectRatio="xMinYMid meet"
+              >
+                <text x="0" y="122">Nick</text>
+                <text x="0" y="244">Crawford</text>
+              </svg>
             </transition>
+            <h1 class="sr-only">Nick Crawford</h1>
 
             <transition name="fade-down" appear>
               <h2 class="subtitle is-4">Web Designer, Founder, Musician</h2>
@@ -22,37 +31,15 @@
           <h3
             class="subtitle is-4"
             style="grid-column: span 3; margin: 2rem 0 -2rem;"
-          >
-            Featured Works...
-          </h3>
+          >Featured Works...</h3>
 
-          <project-card
-            rows="2"
-            cols="1"
-            :project="getProject('startup-stirfry')"
-          ></project-card>
-          <project-card
-            rows="2"
-            cols="2"
-            :project="getProject('homefed')"
-          ></project-card>
+          <project-card rows="2" cols="1" :project="getProject('startup-stirfry')"></project-card>
+          <project-card rows="2" cols="2" :project="getProject('homefed')"></project-card>
 
-          <project-card
-            rows="2"
-            cols="3"
-            :project="getProject('sellout')"
-          ></project-card>
+          <project-card rows="2" cols="3" :project="getProject('sellout')"></project-card>
 
-          <project-card
-            rows="2"
-            cols="2"
-            :project="getProject('theron-brown-music')"
-          ></project-card>
-          <project-card
-            rows="2"
-            cols="1"
-            :project="getProject('garden-box')"
-          ></project-card>
+          <project-card rows="2" cols="2" :project="getProject('theron-brown-music')"></project-card>
+          <project-card rows="2" cols="1" :project="getProject('garden-box')"></project-card>
         </div>
       </div>
     </div>
@@ -147,8 +134,8 @@ aside {
   flex-direction: column;
   justify-content: space-between;
 
-  header {
-    font-size: 0.5em;
+  header .title {
+    max-height: 300px;
   }
 
   @media screen and (orientation: landscape) and (min-width: $lg-bp) {
@@ -156,9 +143,9 @@ aside {
   }
 
   @media screen and (min-width: $md-bp) {
-    header {
-      font-size: 0.6em;
-    }
+    // header {
+    //   font-size: 0.6em;
+    // }
   }
 
   @media screen and (min-width: $lg-bp) {
@@ -170,7 +157,7 @@ aside {
 
   @media screen and (min-width: $xl-bp) {
     header {
-      font-size: 1em;
+      // font-size: 1em;
     }
   }
 }

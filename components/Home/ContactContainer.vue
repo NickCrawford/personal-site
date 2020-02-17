@@ -1,30 +1,20 @@
 <template>
   <footer>
     <div class="contact-container">
-      <p class="subtitle is-5">
-        Get in touch
-      </p>
+      <p class="subtitle is-5">Get in touch</p>
       <p>
         Work inquiries, speaking and teaching engagements, funny jokes, or
         just-saying-hi’s can be sent to:
       </p>
 
-      <p class="subtitle is-5" style="margin-top: 0.25rem;">
-        hi@nickcrawford.design
-      </p>
+      <p class="subtitle is-5" style="margin-top: 0.25rem;">hi@nickcrawford.design</p>
     </div>
 
     <ul class="social-media-container">
-      <li
-        class="social-media-item"
-        v-for="(social, index) in socials"
-        :key="index"
-      >
+      <li class="social-media-item" v-for="(social, index) in socials" :key="index">
         <a :href="social.url" target="_blank">
           <component :is="social.icon" class="icon"></component>
-          <span>
-            {{ social.name }}
-          </span>
+          <span>{{ social.name }}</span>
         </a>
       </li>
     </ul>

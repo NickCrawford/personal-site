@@ -17,7 +17,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: `I'm an independent graphic designer and web developer currently living in Brooklyn, NY. I create products & brands that are fun, user-friendly, and good for the world.`
       }
     ],
     link: [{

@@ -12,9 +12,7 @@
         <div v-if="project">
           <div class="heading-container container">
             <h1 class="title is-2">{{ $prismic.asText(project.title) }}</h1>
-            <h2 class="subtitle is-3">
-              {{ $prismic.asText(project.subtitle) }}
-            </h2>
+            <h2 class="subtitle is-3">{{ $prismic.asText(project.subtitle) }}</h2>
           </div>
 
           <div class="hero-image-container">
@@ -45,8 +43,8 @@
             <p>
               <a :href="slice.primary.link_to.url" class="link-style">
                 {{
-                  $prismic.asText(slice.primary.link_cta) ||
-                    'View the project live'
+                $prismic.asText(slice.primary.link_cta) ||
+                'View the project live'
                 }}
               </a>
             </p>
@@ -102,7 +100,9 @@ export default {
 
   head() {
     return {
-      title: this.$prismic.asText(this.project.title) + 'by Nick Crawford',
+      title: this.project
+        ? this.$prismic.asText(this.project.title) + ' by Nick Crawford'
+        : 'Project by Nick Crawford',
       link: [
         {
           rel: 'canonical',
@@ -115,7 +115,9 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.$prismic.asText(this.project.subtitle)
+          content: this.project
+            ? this.$prismic.asText(this.project.subtitle)
+            : ''
         }
       ]
     }
@@ -183,6 +185,12 @@ export default {
   }
 }
 </script>
+
+<style lang="css">
+.project-page a {
+  color: inherit !important;
+}
+</style>
 
 <style lang="scss" scoped>
 @import '~assets/styles/variables.scss';
