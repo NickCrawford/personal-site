@@ -3,13 +3,18 @@
     <div class="about-container">
       <div class="content">
         <h2 class="subtitle is-1">Hi, I'm Nick</h2>
-        <p
-          class="is-5"
-        >I'm an independent graphic designer and web developer currently living in Brooklyn, NY. I create products &amp; brands that are fun, user-friendly, and good for the world.</p>
+        <p class="is-5">
+          I'm an independent graphic designer and web developer currently living
+          in Brooklyn, NY. I create products &amp; brands that are fun,
+          user-friendly, and good for the world.
+        </p>
       </div>
 
       <div class="photo">
-        <img src="@/static/Nick_Crawford.jpg" alt="Photo of Nick Crawford" />
+        <img
+          src="@/assets/images/Nick_Crawford.jpg"
+          alt="Photo of Nick Crawford"
+        />
       </div>
     </div>
   </div>
