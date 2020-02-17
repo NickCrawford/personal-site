@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card-container" :style="styleObject">
+  <div class="project-card-container" :style="styleObject" v-if="project">
     <nuxt-link :to="{ name: 'project-uid', params: { uid: project.uid } }">
       <div class="project-card">
         <div class="mobile-image-container">
@@ -19,17 +19,13 @@
           />
         </div>
       </div>
-      <div class="project-title subtitle">
-        {{ $prismic.asText(project.data.title) }}
-      </div>
+      <div class="project-title subtitle">{{ $prismic.asText(project.data.title) }}</div>
       <div class="project-services">
         <small
           v-for="(tag, index) in project.data.services"
           :key="index"
           style="margin: 0 0.5em"
-        >
-          {{ tag.service }}
-        </small>
+        >{{ tag.service }}</small>
       </div>
     </nuxt-link>
   </div>
@@ -41,7 +37,7 @@ const hexToDec = function(hexString) {
   return parseInt(decString, 16)
 }
 
-const PARALLAX_AMPLIFIER = 4
+const PARALLAX_AMPLIFIER = 3
 
 function throttled(delay, fn) {
   let lastCall = 0
@@ -166,7 +162,7 @@ export default {
     cursor: pointer;
     z-index: 100;
 
-    filter: drop-shadow(0px 16px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
   }
 }
 
@@ -178,7 +174,6 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 0.25rem;
 
   width: 100%;
   height: 100%;
@@ -230,7 +225,7 @@ export default {
   object-fit: cover;
   object-position: center;
 
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 
   // filter: drop-shadow();

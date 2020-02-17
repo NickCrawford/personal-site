@@ -11,9 +11,7 @@
       <div v-if="project">
         <div class="heading-container container">
           <h1 class="title is-2">{{ $prismic.asText(project.title) }}</h1>
-          <h2 class="subtitle is-3">
-            {{ $prismic.asText(project.subtitle) }}
-          </h2>
+          <h2 class="subtitle is-3">{{ $prismic.asText(project.subtitle) }}</h2>
         </div>
 
         <div class="hero-image-container">
@@ -41,10 +39,12 @@
           </template>
           <template slot="link_to" v-if="slice.primary.link_to.url">
             <p>
-              <a :href="slice.primary.link_to.url" class="link-style">{{
+              <a :href="slice.primary.link_to.url" class="link-style">
+                {{
                 $prismic.asText(slice.primary.link_cta) ||
-                  'View the project live'
-              }}</a>
+                'View the project live'
+                }}
+              </a>
             </p>
           </template>
         </client-needs>
@@ -98,7 +98,7 @@ export default {
 
   head() {
     return {
-      title: this.$prismic.asText(this.project.meta_title),
+      title: this.$prismic.asText(this.project.title) + 'by Nick Crawford',
       link: [
         {
           rel: 'canonical',
@@ -111,7 +111,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.$prismic.asText(this.project.meta_description)
+          content: this.$prismic.asText(this.project.subtitle)
         }
       ]
     }
@@ -204,6 +204,12 @@ header {
     padding: 0.5rem;
     z-index: 10;
     transform: translate(0, 0);
+  }
+
+  font-size: 0.75em;
+
+  @media screen and (min-width: $md-bp) {
+    font-size: 1em;
   }
 }
 
