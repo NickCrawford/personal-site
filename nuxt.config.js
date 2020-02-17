@@ -1,3 +1,5 @@
+const Prismic = require("prismic-javascript");
+
 export default {
   mode: 'universal',
   /*
@@ -68,5 +70,25 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  generate: {
+    routes: function () {
+      return Prismic.getApi("https://stirfry.prismic.io/api/v2", {})
+        .then(function (api) {
+          return api.query(
+            Prismic.Predicates.at("document.type", "project"), {
+              /* options */
+            }
+          );
+        })
+        .then(function (response) {
+          // console.log("Prismic response", response);
+          return response.results.map(project => {
+            console.log("Prismic uid", project.uid);
+            return "/project/" + project.uid;
+          });
+        });
+    }
   }
 }
