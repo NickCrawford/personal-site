@@ -1,6 +1,10 @@
 <template>
   <div>
-    <nuxt />
+    <transition name="layout" mode="out-in">
+      <div>
+        <nuxt />
+      </div>
+    </transition>
 
     <!-- <footer>
       <p>About</p>

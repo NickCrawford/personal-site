@@ -8,23 +8,27 @@
   >
     <!-- <header-bar :fixed="false" :colorPalette="headerColorPalette"></header-bar> -->
     <div class="hero-container">
-      <div v-if="project">
-        <div class="heading-container container">
-          <h1 class="title is-2">{{ $prismic.asText(project.title) }}</h1>
-          <h2 class="subtitle is-3">{{ $prismic.asText(project.subtitle) }}</h2>
-        </div>
+      <transition name="fade">
+        <div v-if="project">
+          <div class="heading-container container">
+            <h1 class="title is-2">{{ $prismic.asText(project.title) }}</h1>
+            <h2 class="subtitle is-3">
+              {{ $prismic.asText(project.subtitle) }}
+            </h2>
+          </div>
 
-        <div class="hero-image-container">
-          <prismic-image
-            :field="layer.image"
-            v-for="(layer, index) in project.layers"
-            :key="`layer-${index}`"
-            :style="{ 'z-index': layer.depth }"
-            class="hero-image"
-            :class="{ background: layer.depth <= 0 }"
-          />
+          <div class="hero-image-container">
+            <prismic-image
+              :field="layer.image"
+              v-for="(layer, index) in project.layers"
+              :key="`layer-${index}`"
+              :style="{ 'z-index': layer.depth }"
+              class="hero-image"
+              :class="{ background: layer.depth <= 0 }"
+            />
+          </div>
         </div>
-      </div>
+      </transition>
     </div>
 
     <div v-if="project">
@@ -41,8 +45,8 @@
             <p>
               <a :href="slice.primary.link_to.url" class="link-style">
                 {{
-                $prismic.asText(slice.primary.link_cta) ||
-                'View the project live'
+                  $prismic.asText(slice.primary.link_cta) ||
+                    'View the project live'
                 }}
               </a>
             </p>
@@ -135,6 +139,23 @@ export default {
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
+  },
+
+  data() {
+    return {
+      originalBGColor: '#FFFFFF'
+    }
+  },
+
+  mounted() {
+    if (this.project) {
+      this.originalBGColor = document.body.style.backgroundColor
+      document.body.style.backgroundColor = this.project.background_color
+    }
+  },
+
+  destroyed() {
+    document.body.style.backgroundColor = this.originalBGColor
   },
 
   computed: {

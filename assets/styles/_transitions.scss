@@ -18,3 +18,25 @@
   opacity: 0;
   transform: translateY(-25%);
 }
+
+// Layout transitions
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.35s;
+}
+
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}
+
+// Page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.35s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

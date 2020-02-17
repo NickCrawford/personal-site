@@ -4,9 +4,13 @@
       <div id="home">
         <aside>
           <header>
-            <h1 class="title is-1">Nick Crawford</h1>
+            <transition name="fade-down" appear>
+              <h1 class="title is-1">Nick Crawford</h1>
+            </transition>
 
-            <h2 class="subtitle is-4">Web Designer, Founder, Musician</h2>
+            <transition name="fade-down" appear>
+              <h2 class="subtitle is-4">Web Designer, Founder, Musician</h2>
+            </transition>
 
             <span class="line-break"></span>
           </header>
@@ -18,15 +22,37 @@
           <h3
             class="subtitle is-4"
             style="grid-column: span 3; margin: 2rem 0 -2rem;"
-          >Featured Works...</h3>
+          >
+            Featured Works...
+          </h3>
 
-          <project-card rows="2" cols="1" :project="getProject('startup-stirfry')"></project-card>
-          <project-card rows="2" cols="2" :project="getProject('homefed')"></project-card>
+          <project-card
+            rows="2"
+            cols="1"
+            :project="getProject('startup-stirfry')"
+          ></project-card>
+          <project-card
+            rows="2"
+            cols="2"
+            :project="getProject('homefed')"
+          ></project-card>
 
-          <project-card rows="2" cols="3" :project="getProject('sellout')"></project-card>
+          <project-card
+            rows="2"
+            cols="3"
+            :project="getProject('sellout')"
+          ></project-card>
 
-          <project-card rows="2" cols="2" :project="getProject('theron-brown-music')"></project-card>
-          <project-card rows="2" cols="1" :project="getProject('garden-box')"></project-card>
+          <project-card
+            rows="2"
+            cols="2"
+            :project="getProject('theron-brown-music')"
+          ></project-card>
+          <project-card
+            rows="2"
+            cols="1"
+            :project="getProject('garden-box')"
+          ></project-card>
         </div>
       </div>
     </div>

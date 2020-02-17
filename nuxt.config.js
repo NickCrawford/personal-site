@@ -5,8 +5,7 @@ export default {
    */
   head: {
     title: 'Nick Crawford',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -19,11 +18,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Prompt:800|Open+Sans:400|Zilla+Slab:400'
       }
     ]
   },
@@ -36,7 +38,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/styles/reset.css', '@/assets/styles/main.scss'],
+  css: ['~/assets/styles/reset.css', '~/assets/styles/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
