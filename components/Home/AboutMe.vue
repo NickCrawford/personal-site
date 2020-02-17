@@ -9,7 +9,7 @@
       </div>
 
       <div class="photo">
-        <img src="~/static/Nick_Crawford.jpg" alt="Photo of Nick Crawford" />
+        <img src="@/static/Nick_Crawford.jpg" alt="Photo of Nick Crawford" />
       </div>
     </div>
   </div>

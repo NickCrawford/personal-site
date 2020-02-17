@@ -5,7 +5,8 @@ export default {
    */
   head: {
     title: 'Nick Crawford',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -18,11 +19,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -45,10 +48,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/svg',
-    '@nuxtjs/prismic'
-  ],
+  modules: ['@nuxtjs/svg', '@nuxtjs/prismic', '@nuxtjs/netlify-files'],
 
   /*
    ** Module Configs
