@@ -33,13 +33,13 @@
             style="grid-column: span 3; margin: 2rem 0 -2rem;"
           >Featured Works...</h3>
 
-          <project-card rows="2" cols="1" :project="getProject('startup-stirfry')"></project-card>
+          <project-card rows="2" cols="1" :project="getProject('garden-box')"></project-card>
           <project-card rows="2" cols="2" :project="getProject('homefed')"></project-card>
 
           <project-card rows="2" cols="3" :project="getProject('sellout')"></project-card>
 
           <project-card rows="2" cols="2" :project="getProject('theron-brown-music')"></project-card>
-          <project-card rows="2" cols="1" :project="getProject('garden-box')"></project-card>
+          <project-card rows="2" cols="1" :project="getProject('startup-stirfry')"></project-card>
         </div>
       </div>
     </div>
