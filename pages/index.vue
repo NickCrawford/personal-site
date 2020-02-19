@@ -136,6 +136,12 @@ aside {
 
   header .title {
     max-height: 300px;
+
+    fill: $darker;
+
+    @media (prefers-color-scheme: dark) {
+      fill: $accent;
+    }
   }
 
   @media screen and (orientation: landscape) and (min-width: $lg-bp) {

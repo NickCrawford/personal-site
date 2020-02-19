@@ -253,7 +253,6 @@ header {
 .hero-image-container {
   position: relative;
   min-height: 100vh;
-  background-color: $darker;
 }
 
 .hero-image {

@@ -35,7 +35,7 @@ export default {}
   width: 100%;
   height: auto;
 
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 </style>
