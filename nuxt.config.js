@@ -21,36 +21,37 @@ export default {
         content: `I'm an independent graphic designer and web developer currently living in Brooklyn, NY. I create products & brands that are fun, user-friendly, and good for the world.`
       },
       {
-        property:"og:title",
-        content: "Nick Crawford"
+        property: 'og:title',
+        content: 'Nick Crawford'
       },
       {
-        property:"og:description",
-        content: "I'm a founder/web designer in Brooklyn, NY making products that are good for the world."
+        property: 'og:description',
+        content:
+          "I'm a founder/web designer in Brooklyn, NY making products that are good for the world."
       },
       {
-        property: "og:image",
-        content:"https://nickcrawford.design/social-preview.jpg"
+        property: 'og:image',
+        content: 'https://nickcrawford.design/social-preview.jpg'
       },
       {
-        property:"og:url",
-        content:"https://nickcrawford.design"
+        property: 'og:url',
+        content: 'https://nickcrawford.design'
       },
       {
-        name:"twitter:card",
-        content:"summary_large_image"
+        name: 'twitter:card',
+        content: 'summary_large_image'
       },
       {
-        property:"og:site_name",
-        content:"Nick Crawford"
-      }, 
+        property: 'og:site_name',
+        content: 'Nick Crawford'
+      },
       {
-        name:"twitter:image:alt",
-        content="Nick Crawford. Web developer, designer, and founder."
-      }, 
+        name: 'twitter:image:alt',
+        content: 'Nick Crawford. Web developer, designer, and founder.'
+      },
       {
-        name: "twitter:site",
-        content:"@_NickCrawford"
+        name: 'twitter:site',
+        content: '@_NickCrawford'
       }
     ],
     link: [
@@ -60,26 +61,26 @@ export default {
         href: '/favicon.ico'
       },
       {
-        rel:"manifest",
-        href:"/site.webmanifest"
+        rel: 'manifest',
+        href: '/site.webmanifest'
       },
       {
-        rel:"icon",
-        type:"image/png",
-        sizes:"16x16",
-        href:"/favicon-16x16.png"
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png'
       },
       {
-        rel:"icon",
-        type:"image/png",
-        sizes:"32x32",
-        href:"/favicon-32x32.png"
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png'
       },
       {
-        rel:"apple-touch-icon",
-        
-        sizes:"180x180",
-        href:"/apple-touch-icon.png"
+        rel: 'apple-touch-icon',
+
+        sizes: '180x180',
+        href: '/apple-touch-icon.png'
       },
       {
         rel: 'stylesheet',
@@ -109,11 +110,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/svg',
-    '@nuxtjs/prismic',
-    '@nuxtjs/netlify-files'
-  ],
+  modules: ['@nuxtjs/svg', '@nuxtjs/prismic', '@nuxtjs/netlify-files'],
 
   /*
    ** Module Configs
