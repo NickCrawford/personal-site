@@ -20,7 +20,6 @@ export default {
         name: 'description',
         content: `I'm an independent graphic designer and web developer currently living in Brooklyn, NY. I create products & brands that are fun, user-friendly, and good for the world.`
       },
-      // Open Graph
       {
         property:"og:title",
         content: "Nick Crawford"
@@ -31,7 +30,7 @@ export default {
       },
       {
         property: "og:image",
-        content:"https://nickcrawford.design/social-preview.jpg">
+        content:"https://nickcrawford.design/social-preview.jpg"
       },
       {
         property:"og:url",
