@@ -34,12 +34,24 @@ export default {
         content: 'https://nickcrawford.design/social-preview.jpg'
       },
       {
+        property: 'og:image:width',
+        content: '1200'
+      },
+      {
+        property: 'og:image:height',
+        content: '630'
+      },
+      {
         property: 'og:url',
         content: 'https://nickcrawford.design'
       },
       {
         name: 'twitter:card',
         content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://nickcrawford.design/social-preview.jpg'
       },
       {
         property: 'og:site_name',
