@@ -6,13 +6,15 @@
       color: textColor
     }"
   >
-    <!-- <header-bar :fixed="false" :colorPalette="headerColorPalette"></header-bar> -->
+    <header-bar :textColor="textColor"></header-bar>
     <div class="hero-container">
       <transition name="fade">
         <div v-if="project">
           <div class="heading-container container">
             <h1 class="title is-2">{{ $prismic.asText(project.title) }}</h1>
-            <h2 class="subtitle is-3">{{ $prismic.asText(project.subtitle) }}</h2>
+            <h2 class="subtitle is-3">
+              {{ $prismic.asText(project.subtitle) }}
+            </h2>
           </div>
 
           <div class="hero-image-container">
@@ -43,8 +45,8 @@
             <p>
               <a :href="slice.primary.link_to.url" class="link-style">
                 {{
-                $prismic.asText(slice.primary.link_cta) ||
-                'View the project live'
+                  $prismic.asText(slice.primary.link_cta) ||
+                    'View the project live'
                 }}
               </a>
             </p>
@@ -67,14 +69,14 @@
           <prismic-image :field="slice.primary.image" />
         </large-media>
       </section>
-      <!-- <project-page-footer></project-page-footer> -->
+      <project-page-footer></project-page-footer>
     </div>
   </div>
 </template>
 
 <script>
-// import HeaderBar from '@/components/HeaderBar.vue'
-// import ProjectPageFooter from '@/components/Portfolio/ProjectPageFooter.vue'
+import HeaderBar from '@/components/HeaderBar.vue'
+import ProjectPageFooter from '@/components/Portfolio/ProjectPageFooter.vue'
 
 import ClientNeeds from '@/components/Portfolio/slices/ClientNeeds.vue'
 import TwoColumnSticky from '@/components/Portfolio/slices/TwoColumnSticky.vue'
@@ -91,8 +93,8 @@ export default {
   layout: 'project',
 
   components: {
-    // HeaderBar,
-    // ProjectPageFooter,
+    HeaderBar,
+    ProjectPageFooter,
     ClientNeeds,
     TwoColumnSticky,
     LargeMedia
@@ -177,7 +179,6 @@ export default {
       )
 
       if (contrast > 130) {
-        this.headerColorPalette = 'gray'
         return darkColor
       }
       return lightColor

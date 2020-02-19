@@ -1,14 +1,14 @@
 <template>
   <div class="project-page-footer">
     <div class="footer-content container">
-      <router-link :to="{ name: 'portfolio' }" class="link-style"
-        >« View more projects</router-link
-      >
+      <nuxt-link to="/" class="link-style">« View more projects</nuxt-link>
 
-      <h3>Let's get cooking!</h3>
-      <router-link :to="{ name: 'contact' }" tag="button" class="stirfry-button"
-        >Contact us »</router-link
-      >
+      <div>
+        <h3 class="subtitle is-5">Get in touch</h3>
+        <a href="mailto:hi@nickcrawford.design" class="contact-button"
+          >hi@nickcrawford.design</a
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -21,42 +21,31 @@ export default {}
 @import '~assets/styles/variables.scss';
 
 .project-page-footer {
-  background-color: $black;
+  background-color: #fafafa;
+  color: $darker;
 }
 
 .project-page-footer .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    'project-heading contact-heading'
-    'projects contact-button';
-
-  grid-column-gap: 4rem;
-
-  justify-content: start;
-  justify-items: space-between;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .project-page-footer .link-style {
-  grid-row: 1 / -1;
-  grid-column: 1 / span 1; /* This is temporary for now. Ideally we'll use grid-area */
-  color: $light;
+  color: $darker;
   text-align: left;
 }
 
 .project-page-footer h3 {
   margin-top: 0.25em;
   text-align: right;
-  grid-area: contact-heading;
-  color: white;
+  color: $success;
 }
 
-.project-page-footer button.stirfry-button {
+.project-page-footer .contact-button {
+  display: block;
   text-align: left;
   // margin-left: 0;
   margin-right: 0;
-  grid-area: contact-button;
 }
 </style>
