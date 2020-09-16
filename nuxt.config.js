@@ -15,6 +15,7 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
+      { name: 'monetization', content: '$ilp.uphold.com/3Xzg7GmpEEQL' },
       {
         hid: 'description',
         name: 'description',
