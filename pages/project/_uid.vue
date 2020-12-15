@@ -17,7 +17,13 @@
             </h2>
           </div>
 
-          <div class="hero-image-container">
+          <div class="hero-image-container" v-if="project.hero_image">
+             <prismic-image
+              :field="project.hero_image"
+              class="hero-image background"
+            />
+          </div>
+          <div class="hero-image-container" v-else>
             <prismic-image
               :field="layer.image"
               v-for="(layer, index) in project.layers"
@@ -27,6 +33,7 @@
               :class="{ background: layer.depth <= 0 }"
             />
           </div>
+
         </div>
       </transition>
     </div>

@@ -35,12 +35,12 @@ export default {
         {
           name: 'Twitter',
           icon: TwitterIcon,
-          url: 'https://twitter.com/_NickCrawford'
+          url: 'https://twitter.com/NickCrawwwford'
         },
         {
           name: 'Instagram',
           icon: InstagramIcon,
-          url: 'https://instagram.com/NickCrawfordDesign'
+          url: 'https://instagram.com/NickCrawwwford'
         },
         {
           name: 'LinkedIn',
