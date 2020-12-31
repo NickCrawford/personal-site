@@ -33,6 +33,11 @@ export default {
   text-align: center;
 
   padding: 2rem 1rem 4rem;
+
+  background-image: url('~assets/new-york.svg');
+  background-repeat: repeat-x;
+  background-position-y: 101%;
+  background-size: 350px auto;
 }
 
 #stars {
@@ -53,7 +58,7 @@ export default {
   text-align: center;
   margin: 2rem 1rem;
 
-  
+  z-index: 2;
 }
 
 .title img {
@@ -66,6 +71,8 @@ main {
   width: 100%;
 
   text-align: center;
+
+  z-index: 2;
 }
 
 main h2 {
