@@ -1,10 +1,8 @@
-# personal-site
-
-> My classy Nuxt.js project
+# nye
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 

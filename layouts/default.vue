@@ -1,48 +1,44 @@
 <template>
   <div>
-    <transition name="layout" mode="out-in">
-      <div>
-        <nuxt />
-
-        <div class="page-footer">
-          <div class="footer-content">
-            <div>
-              <p>hi@nickcrawford.design</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </transition>
-
-    <!-- <footer>
-      <p>About</p>
-      <p></p>
-    </footer>-->
+    <Nuxt />
   </div>
 </template>
 
-<script></script>
-
-<style lang="scss">
-@import '~assets/styles/variables';
-
-.page-footer {
-  // background: white;
-  color: $success;
+<style>
+:root {
+  --bg: #212543;
+  --font-color: #FFFFFB;
+  --font-color-secondary: #DDD1AB;
+  --font-color-accent: #F7D94B;
 }
 
-.footer-content {
-  padding: 2rem;
+html {
+  font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 
-  display: flex;
-  justify-content: center;
+background-color: var(--bg);
+  /* background-image: linear-gradient(to bottom, var(--bg), #121322); */
+  color: var(--font-color);
+}
 
-  p {
-    margin: 0;
-  }
-
-  .is-white {
-    color: white;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 </style>
