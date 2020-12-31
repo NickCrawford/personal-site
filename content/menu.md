@@ -8,23 +8,11 @@ Made for Niko
 Made for Cyril
 
 ## EMargarita
-### Classic margarita, virgin
+### Classic margarita, non-alcoholic
 Made for Em
 
 <!-- ## HarmoNick’s
 Nick || It’s a jazz piano thing, you wouldn’t understand. -->
-
-## Long Island Katie
-### Long island iced tea
-Made for Katie
-
-## Anything But A White Lady
-### Because Devin "doesn't date white women"
-Made for Devin
-
-## Mattini
-### A classic vodka martini
-Made for Matt
 
 ## Lex On The Beach
 ### Sex on the beach
@@ -42,3 +30,14 @@ Made for Yorlynn
 ### Red Bull and apple vodka
 Made for Bobby
 
+## Long Island Katie
+### Long island iced tea
+Made for Katie
+
+## Anything But A White Lady
+### Because Devin "doesn't date white women"
+Made for Devin
+
+## Mattini
+### A *very* dirty vodka martini 😏
+Made for Matt

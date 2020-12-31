@@ -36,7 +36,7 @@ export default {
 
   background-image: url('~assets/new-york.svg');
   background-repeat: repeat-x;
-  background-position-y: 101%;
+  background-position-y: 102%;
   background-size: 350px auto;
 }
 
